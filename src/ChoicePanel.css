@@ -1,0 +1,89 @@
+body
+{
+    height:100%;
+    margin:0;
+    
+}
+
+.banana-zone {   
+    margin: 0px;
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 5;
+    margin-left: auto;
+    opacity: 50;
+}
+
+.question {
+    position:relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 10;
+}
+#banana{
+    background: rgb(250,5,38);
+    animation: bcout1 1s 1 forwards;
+}
+@keyframes bcout1 {
+    from {
+        background: rgb(255, 120, 138);
+    }
+    to {
+        background: rgb(250,5,38);
+    }
+}
+
+@keyframes bc1 {
+    from {
+        background: rgb(250,5,38);
+    }
+    to {
+        background: rgb(255, 120, 138);
+    }
+}
+
+#banana:not(:focus):hover {
+    animation: bc1 1s 1 forwards;
+}
+
+
+#banana2{
+    background: rgb(0,89,255);
+    animation: bcout2 1s 1 forwards;
+}
+@keyframes bc2 {
+    from {
+        background: rgb(0,89,255);
+    }
+    to {
+        background: rgb(120,167,255);
+    }
+}
+
+@keyframes bcout2 {
+    from {
+        background: rgb(120,167,255);
+    }
+    to {
+        background: rgb(0,89,255);
+    }
+
+}
+.b2{
+    position:absolute;
+    right:0;
+}
+
+#banana2:not(:focus):hover
+{
+    animation:bc2 1s 1 forwards;
+    
+}
+
+
+.banana-zone:focus
+{
+    outline:none;
+}

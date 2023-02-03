@@ -1,56 +1,51 @@
-
-
-body
-{
-    height:100%;
-    margin:0;
-    
+body {
+  height: 100%;
+  margin: 0;
 }
 
+.banana-zone {
+  margin: 0px;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 50%;
+  position: absolute;
 
-.banana-zone {   
-    margin: 0px;
-    top :0;
-    left :0;
-    height: 100%;
-    width: 50%;
-    position: absolute;
-
-    z-index: 3;
-    margin-left: auto;
-    opacity: 50;
-    overflow: hidden;
+  z-index: 3;
+  margin-left: auto;
+  opacity: 50;
+  overflow: hidden;
 }
 
 .question {
-    color: aliceblue;
-    position:absolute;
-    font-size: 80px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    z-index: 5;
+  color: aliceblue;
+  position: absolute;
+  font-size: 80px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
 }
 /*#banana{
     background: rgb(250,5,38);
     animation: bcout1 1s 1 forwards;
 }*/
 @keyframes bcout1 {
-    from {
-        background: rgb(255, 120, 138);
-    }
-    to {
-        background: rgb(250,5,38);
-    }
+  from {
+    background: rgb(255, 120, 138);
+  }
+  to {
+    background: rgb(250, 5, 38);
+  }
 }
 
 @keyframes bc1 {
-    from {
-        background: rgb(250,5,38);
-    }
-    to {
-        background: rgb(255, 120, 138);
-    }
+  from {
+    background: rgb(250, 5, 38);
+  }
+  to {
+    background: rgb(255, 120, 138);
+  }
 }
 
 /*#banana:hover {
@@ -88,11 +83,10 @@ body
     
 }
 */
-.b2{
-    right:0;
+.b2 {
+  right: 0;
 }
 
-.banana-zone:focus
-{
-    outline:none;
+.banana-zone:focus {
+  outline: none;
 }

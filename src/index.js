@@ -7,10 +7,11 @@ import ChoicePanel from "./ChoicePanel";
 const root = ReactDOM.createRoot(
     document.getElementById('root')
     );
-    const element = (     
-            <div id ="mainstuff">    
-                <App/>
+    const thePage = (     
+            <div id ="mainstuff">  
+              {/*First Panel is Red Second Is Blue*/}
+                <ChoicePanel/>
                 <ChoicePanel/>
             </div>
     )
-root.render(element);
+root.render(thePage);

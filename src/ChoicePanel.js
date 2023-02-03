@@ -3,24 +3,25 @@ import './ChoicePanel.css';
 
 
 
-function ChoicePanel(){
+function ChoicePanel(props){
     const [color,setColor] = useState(true);
-    const [color2,setColor2] = useState(true);
 
+    
     function colorHandler(prop){
-       if( prop === "banana"){
         setColor(!color);
-       }
-       else if( prop === "banana2"){
-        setColor2(!color2);
-       }
+    }
+    const selectedStyle = {
+      background: "red",
+      width: "50%",
+      zIndex: "2"
+    }
+    const unSelectedStyle = {
+      background: "lightblue",
+      width: "100%",
+      zIndex: "10"
     }
    return(
-    <div>
-    <div className='question'><p>Hello!</p> </div>
-    <div  className="banana-zone b1" style={{ background: color2? 'red':'lightblue'}} onClick={() => colorHandler('banana')}/>
-    <div className="banana-zone b2" style={{ background: color? 'blue':'pink'}} onClick={() => colorHandler('banana2')}/>
-    </div>
+    <div className="banana-zone b1" style= {color? selectedStyle:unSelectedStyle} onClick={() => colorHandler('red')}/>
    )
 }
 

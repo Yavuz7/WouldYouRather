@@ -1,3 +1,5 @@
+
+
 body
 {
     height:100%;
@@ -5,27 +7,33 @@ body
     
 }
 
+
 .banana-zone {   
     margin: 0px;
+    top :0;
+    left :0;
     height: 100%;
     width: 50%;
-    position: fixed;
-    z-index: 5;
+    position: absolute;
+
+    z-index: 3;
     margin-left: auto;
     opacity: 50;
+    overflow: hidden;
 }
 
 .question {
-    position:relative;
+    position:absolute;
+    font-size: larger;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    z-index: 10;
+    z-index: 5;
 }
-#banana{
+/*#banana{
     background: rgb(250,5,38);
     animation: bcout1 1s 1 forwards;
-}
+}*/
 @keyframes bcout1 {
     from {
         background: rgb(255, 120, 138);
@@ -44,7 +52,7 @@ body
     }
 }
 
-#banana:not(:focus):hover {
+/*#banana:hover {
     animation: bc1 1s 1 forwards;
 }
 
@@ -71,17 +79,17 @@ body
     }
 
 }
-.b2{
-    position:absolute;
-    right:0;
-}
 
-#banana2:not(:focus):hover
+
+#banana2:hover
 {
     animation:bc2 1s 1 forwards;
     
 }
-
+*/
+.b2{
+    right:0;
+}
 
 .banana-zone:focus
 {

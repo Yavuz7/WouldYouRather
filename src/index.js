@@ -1,5 +1,4 @@
 import  ReactDOM  from "react-dom/client";
-import App from "./App";
 import ChoicePanel from "./ChoicePanel";
 
 
@@ -10,8 +9,8 @@ const root = ReactDOM.createRoot(
     const thePage = (     
             <div id ="mainstuff">  
               {/*First Panel is Red Second Is Blue*/}
-                <ChoicePanel/>
-                <ChoicePanel/>
+                <ChoicePanel leftPercentage={'0%'} colorUnselected={'red'} colorSelected={'pink'} />
+                <ChoicePanel leftPercentage={'50%'} colorUnselected={'blue'} colorSelected={'lightblue'}/>
             </div>
     )
 root.render(thePage);

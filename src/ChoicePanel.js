@@ -1,28 +1,23 @@
 import { useState } from 'react';
 import './ChoicePanel.css';
 
+export default function ChoicePanel({leftPercentage,colorUnselected,colorSelected}){
 
+    const [select,setSelect] = useState(true);
 
-function ChoicePanel(props){
-    const [color,setColor] = useState(true);
-
-    
-    function colorHandler(prop){
-        setColor(!color);
-    }
     const selectedStyle = {
-      background: "red",
+      background: colorUnselected,
       width: "50%",
-      zIndex: "2"
+      zIndex: "2",
+      left: leftPercentage
     }
     const unSelectedStyle = {
-      background: "lightblue",
+      background: colorSelected,
       width: "100%",
-      zIndex: "10"
+      zIndex: "4"
     }
    return(
-    <div className="banana-zone b1" style= {color? selectedStyle:unSelectedStyle} onClick={() => colorHandler('red')}/>
+    <div className="banana-zone b1" style= {select? selectedStyle:unSelectedStyle} onClick={() => setSelect(!select)}/>
    )
 }
 
-export default ChoicePanel;

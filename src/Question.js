@@ -17,11 +17,12 @@ export default function Question() {
 
   if (!post) return null;
 
-  const splitQuestion = post.data.split(" or ");
+  let splitQuestion = post.data.split(" or ");
+  splitQuestion[0] = splitQuestion[0].replace('Would you rather','');
   return (
     <div className = "questions">
-      <p className="question" style = {{left: '25%', maxWidth: '350px'}}>{splitQuestion[0] }</p>
-      <p className="question" style = {{right: '25%', maxWidth: '350px'}}>{splitQuestion[1]}</p>
+      <p className="question" style = {{left: '12%', textTransform : 'capitalize'}}>{splitQuestion[0]}?</p>
+      <p className="question" style = {{right: '12%', textTransform : 'capitalize'}}>{splitQuestion[1]}</p>
     </div>
   );
 }

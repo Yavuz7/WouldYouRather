@@ -3,10 +3,10 @@
     position: absolute;
     font-size: 40px;
     top: 40%;
-    
-   text-align:center;
+    max-Width: 500px;
+    text-align:center;
     z-index: 10;
     user-select: none;
-    margin:0px;
+    margin:-20px;
     
   }

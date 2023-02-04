@@ -5,24 +5,24 @@ export default function ChoicePanel({
   leftPercentage,
   colorUnselected,
   colorSelected,
+  panelAnimationSet,
 }) {
   const [select, setSelect] = useState(true);
 
-  const selectedStyle = {
-    background: colorUnselected,
+  const unSelectedStyle = {
     width: "50%",
     zIndex: "2",
     left: leftPercentage,
   };
-  const unSelectedStyle = {
+  const selectedStyle = {
     background: colorSelected,
     width: "100%",
     zIndex: "4",
   };
   return (
     <div
-      className="banana-zone b1"
-      style={select ? selectedStyle : unSelectedStyle}
+      className={select ? panelAnimationSet + " banana-zone" : "banana-zone"}
+      style={select ? unSelectedStyle : selectedStyle}
       onClick={() => setSelect(!select)}
     />
   );

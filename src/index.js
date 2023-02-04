@@ -8,13 +8,15 @@ const thePage = (
     {/*First Panel is Red Second Is Blue*/}
     <ChoicePanel
       leftPercentage={"0%"}
-      colorUnselected={"red"} 
+      colorUnselected={"red"}
       colorSelected={"pink"}
+      panelAnimationSet = {"redSet"}
     />
     <ChoicePanel
       leftPercentage={"50%"}
       colorUnselected={"blue"}
       colorSelected={"lightblue"}
+      panelAnimationSet = {"blueSet"}
     />
   </div>
 );

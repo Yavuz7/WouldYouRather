@@ -11,7 +11,7 @@ body {
   width: 50%;
   position: absolute;
 
-  z-index: 3;
+  z-index: 2;
   margin-left: auto;
   opacity: 50;
   overflow: hidden;
@@ -26,67 +26,20 @@ body {
   transform: translate(-50%, -50%);
   z-index: 5;
 }
-/*#banana{
-    background: rgb(250,5,38);
-    animation: bcout1 1s 1 forwards;
-}*/
-@keyframes bcout1 {
-  from {
-    background: rgb(255, 120, 138);
-  }
-  to {
-    background: rgb(250, 5, 38);
-  }
+
+.redSet {
+  background: red;
+  transition: background 1.3s;
 }
 
-@keyframes bc1 {
-  from {
-    background: rgb(250, 5, 38);
-  }
-  to {
-    background: rgb(255, 120, 138);
-  }
+.redSet:hover {
+  background: pink;
 }
 
-/*#banana:hover {
-    animation: bc1 1s 1 forwards;
+.blueSet {
+  background: blue;
+  transition: background 1.3s;
 }
-
-
-#banana2{
-    background: rgb(0,89,255);
-    animation: bcout2 1s 1 forwards;
-}
-@keyframes bc2 {
-    from {
-        background: rgb(0,89,255);
-    }
-    to {
-        background: rgb(120,167,255);
-    }
-}
-
-@keyframes bcout2 {
-    from {
-        background: rgb(120,167,255);
-    }
-    to {
-        background: rgb(0,89,255);
-    }
-
-}
-
-
-#banana2:hover
-{
-    animation:bc2 1s 1 forwards;
-    
-}
-*/
-.b2 {
-  right: 0;
-}
-
-.banana-zone:focus {
-  outline: none;
+.blueSet:hover {
+  background: lightblue;
 }

@@ -31,7 +31,7 @@ export default function ChoicePanel({
     <div
       className={select ? panelAnimationSet + " banana-zone" : "banana-zone"}
       style={select ? unSelectedStyle : selectedStyle}
-      onClick={() => {setSelect(!select); setUpdate(update +1); console.log(update)}}/>    
+      onClick={() => {setSelect(!select); if(select === false){setUpdate(update +1)}; console.log(update)}}/>    
     
   );
 }

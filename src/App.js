@@ -10,23 +10,22 @@ export default function App() {
     <div>
       <UpdateContext.Provider value = {{update, setUpdate}}>
       {/*First Panel is Red Second Is Blue*/}
-      <Question/>
+    
       <ChoicePanel
         leftPercentage={"0%"}
         colorUnselected={"red"}
         colorSelected={"pink"}
         panelAnimationSet={"redSet"}
       />
-
       <ChoicePanel
         leftPercentage={"50%"}
         colorUnselected={"blue"}
         colorSelected={"lightblue"}
         panelAnimationSet={"blueSet"}
       />
-
-
+        <Question/>
       </UpdateContext.Provider>
+
     </div>
   );
 }

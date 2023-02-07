@@ -9,38 +9,28 @@ const baseUrl = "https://would-you-rather-api.abaanshanid.repl.co/";
 
 export default function Question() {
   const [post, setPost] = useState(null);
+  const[counter,setCounter] = useState(0);
   const {
     update,
     setUpdate
   } = useContext(UpdateContext);
 
-  function changeQuestion() {
-    if(update % 2 === 0)
-    {
-      console.log("Change questions triggered");
-      return "questions bold";
-     
-    }
-    else
-    {
-      return "questions";
-    }
-  }
 
-  useEffect(() => {
+
+ useEffect(() => {
     axios.get(baseUrl).then((response) => {
       setPost(response.data);
     });
-  }, []);
-  
-  if (!post) return null;
+  }, [update]);
 
-  
+
+  if (!post) return null;
 
   let splitQuestion = post.data.split(" or ");
   splitQuestion[0] = splitQuestion[0].replace('Would you rather','');
+
   return (
-    <div className = {changeQuestion()}>
+    <div className = {"questions"}>
       <p className="question" style = {{left: '12%'}}>{splitQuestion[0]}?</p>
       <p className="question" style = {{right: '12%'}}>{splitQuestion[1]}</p>
     </div>

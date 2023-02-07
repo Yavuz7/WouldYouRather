@@ -1,5 +1,7 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import {UpdateContext} from "./App"
 import "./ChoicePanel.css";
+
 
 export default function ChoicePanel({
   leftPercentage,
@@ -7,8 +9,13 @@ export default function ChoicePanel({
   colorSelected,
   panelAnimationSet,
 }) {
-  const [select, setSelect] = useState(true);
+  const {
+    update,
+    setUpdate
+  } = useContext(UpdateContext);
 
+  const [select, setSelect] = useState(true);
+ 
   const unSelectedStyle = {
     width: "50%",
     zIndex: "2",
@@ -19,11 +26,13 @@ export default function ChoicePanel({
     width: "100%",
     zIndex: "4",
   };
-  return (
+  
+ return (
     <div
       className={select ? panelAnimationSet + " banana-zone" : "banana-zone"}
       style={select ? unSelectedStyle : selectedStyle}
-      onClick={() => setSelect(!select)}
-    />
+      onClick={() => {setSelect(!select); setUpdate(update +1); console.log(update)}}/>    
+    
   );
 }
+

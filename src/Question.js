@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { UpdateContext } from "./App";
 import "./Question.css";
 import axios from "axios";
 
@@ -8,21 +9,40 @@ const baseUrl = "https://would-you-rather-api.abaanshanid.repl.co/";
 
 export default function Question() {
   const [post, setPost] = useState(null);
+  const {
+    update,
+    setUpdate
+  } = useContext(UpdateContext);
+
+  function changeQuestion() {
+    if(update % 2 === 0)
+    {
+      console.log("Change questions triggered");
+      return "questions bold";
+     
+    }
+    else
+    {
+      return "questions";
+    }
+  }
 
   useEffect(() => {
     axios.get(baseUrl).then((response) => {
       setPost(response.data);
     });
   }, []);
-
+  
   if (!post) return null;
+
+  
 
   let splitQuestion = post.data.split(" or ");
   splitQuestion[0] = splitQuestion[0].replace('Would you rather','');
   return (
-    <div className = "questions">
-      <p className="question" style = {{left: '12%', textTransform : 'capitalize'}}>{splitQuestion[0]}?</p>
-      <p className="question" style = {{right: '12%', textTransform : 'capitalize'}}>{splitQuestion[1]}</p>
+    <div className = {changeQuestion()}>
+      <p className="question" style = {{left: '12%'}}>{splitQuestion[0]}?</p>
+      <p className="question" style = {{right: '12%'}}>{splitQuestion[1]}</p>
     </div>
   );
 }

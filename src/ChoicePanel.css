@@ -28,6 +28,8 @@ body {
 
 .blueSet {
   background: blue;
+  right:0;
+  float:right;
   transition: background 1.3s;
 }
 .blueSet:hover {

@@ -1,38 +1,28 @@
-import { useState, useContext } from "react";
-import {UpdateContext} from "./App"
+import { useState } from "react";
 import "./ChoicePanel.css";
+import Question from "./Question"
 
 
 export default function ChoicePanel({
-  leftPercentage,
-  colorUnselected,
-  colorSelected,
-  panelAnimationSet,
 }) {
-  const {
-    update,
-    setUpdate
-  } = useContext(UpdateContext);
 
-  const [select, setSelect] = useState(true);
- 
-  const unSelectedStyle = {
-    width: "50%",
-    zIndex: "2",
-    left: leftPercentage,
-  };
-  const selectedStyle = {
-    background: colorSelected,
-    width: "100%",
-    zIndex: "4",
-  };
+  const [selectRed, setSelectRed] = useState(true)
+  const [selectBlue, setSelectBlue] = useState(true)
+  const [qUpdate,setQUpdate] = useState(false)
+  const redunSelectedClasses = "banana-zone redUnSelected"
+  const redSelectedClasses = "banana-zone redSelected"
+  const blueunSelectedClasses = "banana-zone blueUnSelected"
+  const blueSelectedClasses = "banana-zone blueSelected"
   
  return (
+  <>
     <div
-      className={select ? panelAnimationSet + " banana-zone" : "banana-zone"}
-      style={select ? unSelectedStyle : selectedStyle}
-      onClick={() => {setSelect(!select); if(select === false){setUpdate(update +1)}; console.log(update)}}/>    
-    
+      className={selectRed ? redunSelectedClasses : redSelectedClasses}
+      onClick={() => {setSelectRed(!selectRed);}}/> 
+     <div className={selectBlue ? blueunSelectedClasses : blueSelectedClasses}
+      onClick={() => {setSelectBlue(!selectBlue);}}/>
+      <Question/>   
+  </> 
   );
 }
 

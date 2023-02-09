@@ -6,32 +6,47 @@ body {
 .banana-zone {
   margin: 0px;
   top: 0;
-  left: 0;
   height: 100%;
-  width: 50%;
-  position: absolute;
-
+  position: fixed;
+display:block;
   z-index: 2;
   margin-left: auto;
   opacity: 50;
-  overflow: hidden;
+  overflow: visible;
 }
-
-.redSet {
+.redSelected{
+  background: pink;
+  width:100%;
+  z-index: 4;
+  transition: background 1.3s, width 1s;
+}
+.redUnSelected {
   background: red;
+  left:0px;
+  width:50%;
+  float:left;
   transition: background 1.3s;
 }
-
-.redSet:hover {
-  background: pink;
-}
-
-.blueSet {
+.blueUnSelected {
   background: blue;
-  right:0;
+  right:0px;
+  width:50%;
   float:right;
   transition: background 1.3s;
 }
-.blueSet:hover {
+.blueSelected{
+  background: lightblue;
+  width:100%;
+  z-index: 4;
+  right:0;
+  transition: background 1.3s, width 1s;
+}
+
+.redUnSelected:hover {
+  background: pink;
+}
+
+
+.blueUnSelected:hover {
   background: lightblue;
 }

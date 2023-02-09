@@ -5,7 +5,6 @@ import App from "./App";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const thePage = (
   <div id="mainstuff">
-
     <App/>
   </div>
 );

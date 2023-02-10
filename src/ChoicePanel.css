@@ -16,7 +16,6 @@ display:block;
 }
 .redSelected{
   background: pink;
-  width:100%;
   z-index: 4;
   transition: background 1.3s, width 1s;
 }
@@ -36,7 +35,6 @@ display:block;
 }
 .blueSelected{
   background: lightblue;
-  width:100%;
   z-index: 4;
   right:0;
   transition: background 1.3s, width 1s;

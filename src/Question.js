@@ -1,6 +1,5 @@
 import { useState, useEffect, memo } from "react";
 import "./Question.css";
-import RandomNumb from "./RandomNumb";
 import axios from "axios";
 
 //Api From : https://replit.com/@AbaanShanid :3
@@ -16,10 +15,10 @@ export default memo( function Question(updater) {
     });
   }, [updater]);
 
-
   if (!post) return null;
 
-  let splitQuestion = post.data.split(" or ");
+  let splitQuestion;
+  post.data.indexOf(", ") > 0? splitQuestion = post.data.split(", "): splitQuestion = post.data.split(" or ");
   splitQuestion[0] = splitQuestion[0].replace('Would you rather','');
 
   return (
@@ -28,7 +27,6 @@ export default memo( function Question(updater) {
       <p className="question" style = {{left: '12%'}}>{splitQuestion[0]}?</p>
       <p className="question" style = {{right: '12%'}}>{splitQuestion[1]}</p>     
     </div>
-    <RandomNumb/>
     </>
   );
 })

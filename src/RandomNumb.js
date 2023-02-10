@@ -1,16 +1,15 @@
-import { useState } from "react";
+
 
 export default function RandomNumb() {
-  const [numbey, setNumbey] = useState(0);
-  const [numbey2, setNumbey2] = useState(0);
+  let numbey,numbey2;
   function genRan() {
-    setNumbey(Math.floor(Math.random() * 100));
-    setNumbey2(100 - numbey);
+    numbey = Math.floor(Math.random() * 100);
+    numbey2 = 100 - numbey;
   }
+  genRan();
   return (
-    <div>
-        {numbey}{numbey2}
-
-    </div>
+   <>
+        {numbey} {numbey2}
+    </>
   );
 }

@@ -1,5 +1,4 @@
-import { useState, useEffect, useContext, useCallback, shouldComponentUpdate } from "react";
-import { UpdateContext } from "./App";
+import { useState, useEffect, memo } from "react";
 import "./Question.css";
 import RandomNumb from "./RandomNumb";
 import axios from "axios";
@@ -8,18 +7,14 @@ import axios from "axios";
 //Code Repurposed : https://www.freecodecamp.org/news/how-to-use-axios-with-react/#how-to-set-up-axios-with-react
 const baseUrl = "https://would-you-rather-api.abaanshanid.repl.co/";
 
-export default function Question(updater) {
+export default memo( function Question(updater) {
   const [post, setPost] = useState(null);
-  const {
-    update,
-    setUpdate
-  } = useContext(UpdateContext);
 
  useEffect(() => {
     axios.get(baseUrl).then((response) => {
       setPost(response.data);
     });
-  }, []);
+  }, [updater]);
 
 
   if (!post) return null;
@@ -28,10 +23,12 @@ export default function Question(updater) {
   splitQuestion[0] = splitQuestion[0].replace('Would you rather','');
 
   return (
+    <>
     <div className = {"questions"}>
       <p className="question" style = {{left: '12%'}}>{splitQuestion[0]}?</p>
-      <p className="question" style = {{right: '12%'}}>{splitQuestion[1]}</p>
-      <RandomNumb/>
+      <p className="question" style = {{right: '12%'}}>{splitQuestion[1]}</p>     
     </div>
+    <RandomNumb/>
+    </>
   );
-}
+})

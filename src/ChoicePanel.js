@@ -3,8 +3,7 @@ import "./ChoicePanel.css";
 import Question from "./Question"
 
 
-export default function ChoicePanel({
-}) {
+export default function ChoicePanel() {
 
   const [selectRed, setSelectRed] = useState(true)
   const [selectBlue, setSelectBlue] = useState(true)
@@ -18,10 +17,10 @@ export default function ChoicePanel({
   <>
     <div
       className={selectRed ? redunSelectedClasses : redSelectedClasses}
-      onClick={() => {setSelectRed(!selectRed);}}/> 
+      onClick={() => {setSelectRed(!selectRed);if(selectRed === false){setQUpdate(!qUpdate)}}}/> 
      <div className={selectBlue ? blueunSelectedClasses : blueSelectedClasses}
-      onClick={() => {setSelectBlue(!selectBlue);}}/>
-      <Question/>   
+      onClick={() => {setSelectBlue(!selectBlue);if(selectBlue === false){setQUpdate(!qUpdate)}}}/>
+      <Question updater = {qUpdate}/>   
   </> 
   );
 }

@@ -4,22 +4,23 @@ import Question from "./Question"
 
 
 export default function ChoicePanel() {
-
+  function qUpdater(select)
+  {
+    if(select === false){
+      setQUpdate(!qUpdate);
+    }
+  }
   const [selectRed, setSelectRed] = useState(true)
   const [selectBlue, setSelectBlue] = useState(true)
   const [qUpdate,setQUpdate] = useState(false)
-  const redunSelectedClasses = "banana-zone redUnSelected"
-  const redSelectedClasses = "banana-zone redSelected"
-  const blueunSelectedClasses = "banana-zone blueUnSelected"
-  const blueSelectedClasses = "banana-zone blueSelected"
-  
+
  return (
   <>
     <div
-      className={selectRed ? redunSelectedClasses : redSelectedClasses}
-      onClick={() => {setSelectRed(!selectRed);if(selectRed === false){setQUpdate(!qUpdate)}}}/> 
-     <div className={selectBlue ? blueunSelectedClasses : blueSelectedClasses}
-      onClick={() => {setSelectBlue(!selectBlue);if(selectBlue === false){setQUpdate(!qUpdate)}}}/>
+      className={"banana-zone" + (selectRed ? " redUnSelected" : " redSelected")}
+      onClick={() => {setSelectRed(!selectRed);qUpdater(selectRed);}}/> 
+     <div className={"banana-zone" + (selectBlue ? " blueUnSelected" : " blueSelected")}
+      onClick={() => {setSelectBlue(!selectBlue);qUpdater(selectBlue);}}/>
       <Question updater = {qUpdate}/>   
   </> 
   );

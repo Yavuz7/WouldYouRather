@@ -17,6 +17,7 @@ display:block;
 .redSelected{
   background: pink;
   z-index: 4;
+  width:100%;
   transition: background 1.3s, width 1s;
 }
 .redUnSelected {
@@ -24,18 +25,19 @@ display:block;
   left:0px;
   width:50%;
   float:left;
-  transition: background 1.3s;
+  transition: background 1.3s, width 1s;
 }
 .blueUnSelected {
   background: blue;
   right:0px;
   width:50%;
   float:right;
-  transition: background 1.3s;
+  transition: background 1.3s, width 1s;
 }
 .blueSelected{
   background: lightblue;
   z-index: 4;
+  width:100%;
   right:0;
   transition: background 1.3s, width 1s;
 }

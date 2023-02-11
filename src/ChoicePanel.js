@@ -4,11 +4,10 @@ import Question from "./Question"
 import RandomNumb from "./RandomNumb";
 
 export default function ChoicePanel() {
-  const [selectRed, setSelectRed] = useState(true)
-  const [selectBlue, setSelectBlue] = useState(true)
-  const [randStorage,setRandStorage] = useState(50)
+  const [select,setSelect] = useState(true)
   const [qUpdate,setQUpdate] = useState(false)
-
+  const [randStorage,setRandStorage] = useState(50)
+  
   function qUpdater(select)
   {
     if(select === false){
@@ -20,19 +19,20 @@ export default function ChoicePanel() {
     }
   }
 console.log({randStorage});
-
+const randWidthRed = randStorage + "%";
+const randWidthBlue= (100 - randStorage)+ "%"
  return (
   <section className="ChoicePanels">  
 
-     <div className={"banana-zone" + (selectRed ? " redUnSelected" : " redSelected")}
-     style = {{"width" : {randStorage}}}
-      onClick={() => {setSelectRed(!selectRed);qUpdater(selectRed);}}/> 
+     <div className={"banana-zone" + (select ? " redUnSelected" : " redSelected")}
+     style = {{width: randWidthRed}}
+      onClick={() => {setSelect(!select);qUpdater(select);}}/> 
 
-     <div className={"banana-zone" + (selectBlue ? " blueUnSelected" : " blueSelected")}
-     style = {{"width":{randStorage}}}
-      onClick={() => {setSelectBlue(!selectBlue);qUpdater(selectBlue);}}/>
+     <div className={"banana-zone" + (select ? " blueUnSelected" : " blueSelected")}
+     style = {{width: randWidthBlue}}
+      onClick={() => {setSelect(!select);qUpdater(select);}}/>
 
-      {/*<Question updater = {qUpdate}/>*/}
+      <Question updater = {qUpdate}/>
       {randStorage !== 50 && <RandomNumb Variable = {randStorage}/>}  
   </section> 
   );

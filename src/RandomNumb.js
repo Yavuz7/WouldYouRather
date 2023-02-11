@@ -1,5 +1,4 @@
 import "./Question.css";
-import { useEffect} from "react";
 
 export default function RandomNumb({Variable}) {
   let numbey = Variable;
@@ -7,8 +6,8 @@ export default function RandomNumb({Variable}) {
 
   return (
      <div id="Percentage-Numbers" className="questions">
-        <span className="question" style = {{left: '12%'}}>{numbey}</span>
-        <span className = "question" style = {{right: '12%'}}>{numbey2}</span> 
+        <span className="question" style = {{left: '12%'}}>{numbey}% Chose</span>
+        <span className = "question" style = {{right: '12%'}}>{numbey2}% Chose</span> 
      </div>
   );
 }

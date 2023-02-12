@@ -15,7 +15,7 @@ display:block;
   overflow: visible;
 }
 .redSelected{
-  background: pink;
+  background: rgb(253, 132, 153);
   z-index: 4;
   width:100%;
   transition: background 1.3s, width 1s;
@@ -35,7 +35,7 @@ display:block;
   transition: background 1.3s, width 1s;
 }
 .blueSelected{
-  background: lightblue;
+  background: rgb(114, 218, 252);
   z-index: 4;
   width:100%;
   right:0;
@@ -43,10 +43,10 @@ display:block;
 }
 
 .redUnSelected:hover {
-  background: pink;
+  background: rgb(255, 158, 174);
 }
 
 
 .blueUnSelected:hover {
-  background: lightblue;
+  background: rgb(96, 215, 255);
 }

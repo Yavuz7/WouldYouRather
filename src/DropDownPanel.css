@@ -1,35 +1,45 @@
 /* Code Repurposed from: https://blog.hubspot.com/website/html-dropdown*/
 .dropDownMenu{
     display: flex;
+    flex:auto;
+    margin: 0 auto;
     justify-content: center;
     align-items: center;
     position:relative;
     z-index: 7;
-    
+    width:700px;   
 }
-.dropDownButton{
-    border-radius: 15px;
-    padding:15px 90px;
+.dropDownButton{   
+    padding:20px 325px;
 }
 
-.dropDownMenu:hover .dropDownContent{
-    display:block;
-    background: white;
+.dropDownMenu:hover{
+    background: transparent;
+    transform: translate(0, 0px);
+    transition: opacity 1s;
 }
-.dropDownContent{
-    display: none;
+.dropDownMenu:hover .dropDownContent{
+    display:inline-block;
+    min-height: 40px;
+    background: transparent;
+    opacity:1;
+}
+.dropDownContent{  
+    display:none;
     position: absolute;
-    overflow: auto;
-    border-radius: 25px;
+    overflow: none;
     z-index: 10;
+    opacity:0;  
 }
 .dropDownContent a {
+    background-color: white;
     padding:150px 100px;
     display:inline-block;
     text-align:center;
     text-decoration: none;
     transition: background-color .5s;
-   
+    outline:1px grey solid;
+ 
 }
 .dropDownContent a:hover{
     background-color: lightgray;

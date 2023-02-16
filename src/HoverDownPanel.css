@@ -22,6 +22,9 @@
 
 }
 .gridContent span{
+    display:flex;
+    align-items:flex-end;
+    justify-content:center;
     background-color: white;
     text-align:center;
     text-decoration: none;

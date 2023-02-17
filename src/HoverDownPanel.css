@@ -1,28 +1,32 @@
 .hoverDownGrid{
-    display: flex;
-    flex:auto;
+    display: block;
     margin: 0 auto;
-    justify-content: center;
-    align-items: center;
-    position:relative;
+    position:fixed;
+    bottom:0;
+    right: 50%;
+    left: 25%;
+    margin-left: -350px;
     z-index: 7;
     width:700px;
-    transform: translateY(-135px);  
-    transition:transform 1s;
+    text-align: center;
+    transform: translate(25vw, 135px);  
+    transition:transform .5s;
 }
-.hoverDownGrid:hover{
-    transform: translateY(0px); 
-    transition:transform 1s;
+.hoverDownGrid:hover,.hoverDownGrid:focus{
+    transform: translate(25vw, 0); 
+    transition:transform .4s;
       
 }
 .gridContent{
     display:inline-grid;
     grid-template-columns: repeat(3,175px);
-    grid-template-rows: 135px 50px;
+    grid-template-rows: 50px 135px ;
+    overflow:hidden;
 
 }
 .gridContent span{
     display:flex;
+    overflow:hidden;
     align-items:flex-end;
     justify-content:center;
     background-color: white;
@@ -32,7 +36,7 @@
     border-bottom:1px grey solid;
 }
 .gridContent span:nth-child(4){
-    grid-row-start: 2;
+    grid-row-start: 1;
     grid-column-start: 1;
     grid-column-end: 4;
 }

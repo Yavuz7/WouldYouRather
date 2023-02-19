@@ -8,9 +8,9 @@ export default function HoverDownPanel() {
     <>
         <div className="hoverDownGrid">
         <section className="gridContent">           
-            <span><img src={gitHubIcon} alt="GitHubIcon"></img>GitHub</span>
+            <span><a href ="https://github.com/Yavuz7/WouldYouRather" target="_blank" rel="noreferrer"><img src={gitHubIcon} alt="GitHubIcon"></img></a>GitHub</span>
             <span><img src={aboutmeicon} alt="AboutSiteIcon"></img>About Me</span>
-            <span><img src={aboutsiteicon} alt="AboutMeIcon"></img>About Site</span>
+            <span><img src={aboutsiteicon} alt="AboutMeIcon" href=""></img>About Site</span>
             <span>More Information</span>
         </section>
 

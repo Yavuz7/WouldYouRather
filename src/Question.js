@@ -24,6 +24,7 @@ export default memo( function Question(updater) {
   return (
     <>
     <div className = {"questions"}>
+      <p className="question title">Would You Rather</p>
       <p className="question" style = {{left: '12%'}}>{splitQuestion[0]}?</p>
       <p className="question" style = {{right: '12%'}}>{splitQuestion[1]}</p>     
     </div>

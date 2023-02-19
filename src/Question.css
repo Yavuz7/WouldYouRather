@@ -1,8 +1,8 @@
 .question {
     color: white;
     position: absolute;
-    font-size: 4vw;
-    top: 25vh;
+    font-size: 3.4vw;
+    top: 40vh;
     max-Width: 35vw;
     text-align:center;
     
@@ -12,14 +12,27 @@
     background-color: transparent;
     pointer-events: none;
     text-transform : capitalize;
+
+     /*Text-Shadow Outline From : https://owumaro.github.io/text-stroke-generator/*/
+     text-shadow: rgb(0, 0, 0) 1px 0px 0px, rgb(0, 0, 0) 0.540302px 0.841471px 0px, rgb(0, 0, 0) -0.416147px 0.909297px 0px, rgb(0, 0, 0) -0.989992px 0.14112px 0px, rgb(0, 0, 0) -0.653644px -0.756802px 0px, rgb(0, 0, 0) 0.283662px -0.958924px 0px, rgb(0, 0, 0) 0.96017px -0.279415px 0px;
     
+  }
+  .title{
+    display:flex;
+    position: absolute;
+    max-width: none;
+    font-size: 6vw;
+    top:8vh;
+    left:28vw;
+    margin:0;
   }
 
   #Percentage-Numbers span{
-    top:70vh;
+    font-weight: 400;
+    top:80vh;
     font-size:7vw;
   }
   #Percentage-Numbers text{
-    top:85vh;
+    top:97vh;
     font-size: 3vw;
   }

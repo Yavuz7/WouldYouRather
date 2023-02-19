@@ -22,7 +22,11 @@
     display:inline-grid;
     grid-template-columns: repeat(3,175px);
     grid-template-rows: 65px 135px ;
-    overflow:hidden;
+    overflow:hidden;    background-image: linear-gradient(
+        to right,
+        rgba(226,210,40,255) 0,rgba(226,210,40,255) 33.3%,
+         rgba(255,166,51,255) 33.4%,rgba(255,166,51,255) 66.6%,
+         rgba(255,81,62,255) 66.7%, rgba(255,81,62,255) 100%);
     outline: 2px black solid;
     border-radius: 20% 20% 0px 0px;
     opacity: 35%;
@@ -61,7 +65,7 @@
     user-select: none;
 }
 .gridContent:hover{
-    transition:opacity .4s;
+    transition:opacity .4s;   
     opacity: 100%;
 }
 .gridContent span:hover:not(span:nth-child(4)){

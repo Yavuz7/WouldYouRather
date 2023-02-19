@@ -33,6 +33,7 @@ const randWidthBlue= (100 - randStorage)+ "%"
       onClick={() => {setSelect(!select);qUpdater(select);}}/>
 
       {/*<Question updater = {qUpdate}/>*/}
+      <Question updater = {qUpdate}/>
       {randStorage !== 50 && <RandomNumb Variable = {randStorage}/>}  
   </section> 
   );

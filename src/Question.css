@@ -1,15 +1,14 @@
 .question {
     color: white;
-    font-weight:1000;
     position: absolute;
-    font-size: 50px;
-    top: 40%;
-    max-Width: 500px;
+    font-size: 4vw;
+    top: 25vh;
+    max-Width: 35vw;
     text-align:center;
     
     z-index: 10;
     user-select: none;
-    margin:-20px;
+    margin:-5vw;
     background-color: transparent;
     pointer-events: none;
     text-transform : capitalize;
@@ -17,6 +16,10 @@
   }
 
   #Percentage-Numbers span{
-    top:70%;
-    font-size:120px;
+    top:70vh;
+    font-size:7vw;
+  }
+  #Percentage-Numbers text{
+    top:85vh;
+    font-size: 3vw;
   }

@@ -1,7 +1,7 @@
 .hoverDownGrid{
     display: block;
     margin: 0 auto;
-    position:fixed;
+    position:absolute;
     bottom:0;
     right: 50%;
     left: 25%;
@@ -18,6 +18,7 @@
       
 }
 .gridContent{
+    position: relative;
     display:inline-grid;
     grid-template-columns: repeat(3,175px);
     grid-template-rows: 50px 135px ;
@@ -26,20 +27,27 @@
 }
 .gridContent span{
     display:flex;
-    overflow:hidden;
+    overflow:visible;
     align-items:flex-end;
     justify-content:center;
-    background-color: white;
-    text-align:center;
-    text-decoration: none;
+    background-color: rgb(0, 0, 0);
+    font-weight: bold;
+    color: white;
     transition: background-color .5s;
-    border-bottom:1px grey solid;
+}
+.gridContent span img{
+    position: absolute;
 }
 .gridContent span:nth-child(4){
     grid-row-start: 1;
     grid-column-start: 1;
     grid-column-end: 4;
+    font-size: 45px;
+    border-radius: 35% 35% 0px 0px;
+    background-color: white;
+    color: black;
 }
 .gridContent span:hover:not(span:nth-child(4)){
-    background-color: lightgray;
+    background-color: rgb(255, 255, 255);
+   color: white;
 }

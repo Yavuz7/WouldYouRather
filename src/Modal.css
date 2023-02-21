@@ -1,0 +1,50 @@
+.modalStuff{
+    display: flex;
+    position:fixed;
+    top:0;
+    left:0;
+    right: 0;
+    bottom:0;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, .2);
+    z-index: 20;
+}
+
+.modalContent{
+    background-color: white;
+    width: 30vw;
+    height: 50vh;
+    padding: 0px;
+    border-radius: 25px;
+}
+.modalContent button{
+    width:6%;
+    margin: 5px;
+    min-height:85px;
+    height:12vh;
+    position:absolute;
+    top:25vh;
+    right:35vw;
+    background: white;
+    font-weight: bolder;
+    font-size:30px;
+    font-size: 5vw;
+    border:none;
+    transition: background-color .3s;
+    border-radius: 25px;
+}
+.modalContent button:hover{
+    background-color: lightgray;
+    border-radius: 25px;
+    transition: background-color .3s;
+}
+.modalContent h1{
+    font-size: 3.4vw;
+    padding:5px;
+    margin:0px;
+    
+}
+.modalContent p{
+    font-size: 20px;
+}

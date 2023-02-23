@@ -1,31 +1,34 @@
 .modalStuff{
     display: flex;
+    position:absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+}
+.modalBackground{
+    display: flex;
     position:fixed;
     top:0;
     left:0;
     right: 0;
     bottom:0;
-    align-items: center;
-    justify-content: center;
     background-color: rgba(0, 0, 0, .2);
-    z-index: 20;
+    z-index: 19;
 }
-
 .modalContent{
     background-color: white;
     width: 30vw;
-    height: 50vh;
+    height: 48vh;
     padding: 0px;
     border-radius: 25px;
 }
 .modalContent button{
-    width:6%;
-    margin: 5px;
-    min-height:85px;
-    height:12vh;
+    padding: 1vh 1.5vw;
     position:absolute;
-    top:25vh;
-    right:35vw;
+    left:22.5vw;
     background: white;
     font-weight: bolder;
     font-size:30px;
@@ -41,10 +44,20 @@
 }
 .modalContent h1{
     font-size: 3.4vw;
-    padding:5px;
+    padding-left: 2.2vw;
+    padding-top: 3.5vh;
+    padding-bottom: 2vh;
+    text-decoration: 5px underline;
     margin:0px;
-    
+    font-weight: bolder;
 }
 .modalContent p{
-    font-size: 20px;
+    font-size: 1.8vw;
+    max-width: 27vw;
+    padding-left: 2vw;
+}
+.modalContent a{
+    font-size: 1.3vw;
+    max-width: 27vw;
+    padding-left: 2vw;
 }

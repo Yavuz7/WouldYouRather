@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Yavuz7.github.io/WouldYouRather/static/css/main.b4ae30d3.css",
+    "main.js": "/Yavuz7.github.io/WouldYouRather/static/js/main.4680db00.js",
+    "static/media/aboutsiteicon.png": "/Yavuz7.github.io/WouldYouRather/static/media/aboutsiteicon.db439fdb2836f2319af2.png",
+    "index.html": "/Yavuz7.github.io/WouldYouRather/index.html",
+    "main.b4ae30d3.css.map": "/Yavuz7.github.io/WouldYouRather/static/css/main.b4ae30d3.css.map",
+    "main.4680db00.js.map": "/Yavuz7.github.io/WouldYouRather/static/js/main.4680db00.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b4ae30d3.css",
+    "static/js/main.4680db00.js"
+  ]
+}

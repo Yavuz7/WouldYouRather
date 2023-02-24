@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/yavuz7.github.io/WouldYouRather/static/css/main.b4ae30d3.css",
-    "main.js": "/yavuz7.github.io/WouldYouRather/static/js/main.a691d522.js",
-    "static/media/aboutsiteicon.png": "/yavuz7.github.io/WouldYouRather/static/media/aboutsiteicon.db439fdb2836f2319af2.png",
-    "index.html": "/yavuz7.github.io/WouldYouRather/index.html",
-    "main.b4ae30d3.css.map": "/yavuz7.github.io/WouldYouRather/static/css/main.b4ae30d3.css.map",
-    "main.a691d522.js.map": "/yavuz7.github.io/WouldYouRather/static/js/main.a691d522.js.map"
+    "main.css": "/WouldYouRather/static/css/main.b4ae30d3.css",
+    "main.js": "/WouldYouRather/static/js/main.98e01575.js",
+    "static/media/aboutsiteicon.png": "/WouldYouRather/static/media/aboutsiteicon.db439fdb2836f2319af2.png",
+    "index.html": "/WouldYouRather/index.html",
+    "main.b4ae30d3.css.map": "/WouldYouRather/static/css/main.b4ae30d3.css.map",
+    "main.98e01575.js.map": "/WouldYouRather/static/js/main.98e01575.js.map"
   },
   "entrypoints": [
     "static/css/main.b4ae30d3.css",
-    "static/js/main.a691d522.js"
+    "static/js/main.98e01575.js"
   ]
 }

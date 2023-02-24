@@ -5,14 +5,16 @@
     top: 40vh;
     max-Width: 35vw;
     text-align:center;
-    
+
     z-index: 10;
     user-select: none;
     margin:-5vw;
     background-color: transparent;
     pointer-events: none;
     text-transform : capitalize;
-
+    font-family: 'Source Sans Pro', sans-serif;
+    /*Text-Shadow Outline From : https://owumaro.github.io/text-stroke-generator/*/
+    text-shadow: rgb(0, 0, 0) 1px 0px 0px, rgb(0, 0, 0) 0.540302px 0.841471px 0px, rgb(0, 0, 0) -0.416147px 0.909297px 0px, rgb(0, 0, 0) -0.989992px 0.14112px 0px, rgb(0, 0, 0) -0.653644px -0.756802px 0px, rgb(0, 0, 0) 0.283662px -0.958924px 0px, rgb(0, 0, 0) 0.96017px -0.279415px 0px;
   }
   .title{
     display:flex;
@@ -22,14 +24,8 @@
     top:8vh;
     left:28vw;
     margin:0;
-    /*Text-Shadow Outline From : https://owumaro.github.io/text-stroke-generator/*/
-    text-shadow: rgb(0, 0, 0) 1px 0px 0px, rgb(0, 0, 0) 0.540302px 0.841471px 0px, rgb(0, 0, 0) -0.416147px 0.909297px 0px, rgb(0, 0, 0) -0.989992px 0.14112px 0px, rgb(0, 0, 0) -0.653644px -0.756802px 0px, rgb(0, 0, 0) 0.283662px -0.958924px 0px, rgb(0, 0, 0) 0.96017px -0.279415px 0px;
   }
 
-  #Percentage-Numbers{
-    /*Text-Shadow Outline From : https://owumaro.github.io/text-stroke-generator/*/
-    text-shadow: rgb(0, 0, 0) 1px 0px 0px, rgb(0, 0, 0) 0.540302px 0.841471px 0px, rgb(0, 0, 0) -0.416147px 0.909297px 0px, rgb(0, 0, 0) -0.989992px 0.14112px 0px, rgb(0, 0, 0) -0.653644px -0.756802px 0px, rgb(0, 0, 0) 0.283662px -0.958924px 0px, rgb(0, 0, 0) 0.96017px -0.279415px 0px;
-  }
   #Percentage-Numbers span{
     font-weight: 400;
     top:80vh;

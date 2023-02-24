@@ -1,15 +1,18 @@
+:root{
+    --hoverDownWidth: 10vw;
+    --hoverDownHeight:15vh;
+}
 .hoverDownGrid{
     display: block;
     margin: 0 auto;
     position:absolute;
     bottom:0;
-    right: 50%;
-    left: 25%;
-    margin-left: -262.5px;
+    left:16%;
+    margin-left: calc(var(--hoverDownWidth)/-2);
     z-index: 7;
-    width:525px;
+    width:calc(var(--hoverDownWidth)*3);
     text-align: center;
-    transform: translate(25vw, 135px);  
+    transform: translate(25vw, var(--hoverDownHeight));  
     transition:transform .5s;
 }
 .hoverDownGrid:hover,.hoverDownGrid:focus{
@@ -20,8 +23,8 @@
 .gridContent{
     position: relative;
     display:inline-grid;
-    grid-template-columns: repeat(3,175px);
-    grid-template-rows: 65px 135px ;
+    grid-template-columns: repeat(3,var(--hoverDownWidth));
+    grid-template-rows: 9vh var(--hoverDownHeight);
     overflow:hidden;    background-image: linear-gradient(
         to right,
         rgba(226,210,40,255) 0,rgba(226,210,40,255) 33.3%,
@@ -35,6 +38,8 @@
 }
 .gridContent span,
 .gridContent span a{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size:.9vw;
     display:flex;
     overflow:visible;
     align-items:flex-end;
@@ -42,16 +47,21 @@
     background-color: rgb(0, 0, 0);
     color: white;
     transition: background-color .5s;
+    
 }
 .gridContent span img, 
 .gridContent span a{
+    max-width: 100%;
+    width:var(--hoverDownWidth);
+    height: var(--hoverDownHeight);
     position: absolute;
+    
 }
 .gridContent span:nth-child(4){
     grid-row-start: 1;
     grid-column-start: 1;
     grid-column-end: 4;
-    font-size: 55px;
+    font-size: 3vw;
     background-image: linear-gradient(
         to right,
         rgba(226,210,40,255) 0,rgba(226,210,40,255) 33.3%,

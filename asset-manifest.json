@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/WouldYouRather/static/css/main.9e614bc2.css",
+    "main.css": "/WouldYouRather/static/css/main.87b41f9a.css",
     "main.js": "/WouldYouRather/static/js/main.e4e7b77e.js",
     "static/media/aboutsiteicon.png": "/WouldYouRather/static/media/aboutsiteicon.db439fdb2836f2319af2.png",
     "index.html": "/WouldYouRather/index.html",
-    "main.9e614bc2.css.map": "/WouldYouRather/static/css/main.9e614bc2.css.map",
+    "main.87b41f9a.css.map": "/WouldYouRather/static/css/main.87b41f9a.css.map",
     "main.e4e7b77e.js.map": "/WouldYouRather/static/js/main.e4e7b77e.js.map"
   },
   "entrypoints": [
-    "static/css/main.9e614bc2.css",
+    "static/css/main.87b41f9a.css",
     "static/js/main.e4e7b77e.js"
   ]
 }

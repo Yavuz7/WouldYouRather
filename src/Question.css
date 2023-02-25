@@ -35,3 +35,24 @@
     top:95vh;
     font-size: 3vw;
   }
+
+  @media screen and (max-height: 600px ){
+    .question{
+      font-size: 3vw;
+    }
+    .title{
+      font-size: 6vw;
+      top:4vh;
+      left:28vw;
+      margin:0;
+    }
+    #Percentage-Numbers span{
+      font-weight: 400;
+      top:75vh;
+      font-size:7vw;
+    }
+    #Percentage-Numbers text{
+      top:95vh;
+      font-size: 3vw;
+    }
+  }

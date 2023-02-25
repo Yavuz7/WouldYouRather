@@ -2,12 +2,18 @@
     --hoverDownWidth: 10vw;
     --hoverDownHeight:15vh;
 }
+@media screen and (max-height: 600px )
+{
+    :root{
+        --hoverDownHeight:20vh;
+    }
+}
 .hoverDownGrid{
     display: block;
     margin: 0 auto;
     position:absolute;
     bottom:0;
-    left:16%;
+    left:calc(var(--hoverDownWidth)*1.5);
     margin-left: calc(var(--hoverDownWidth)/-2);
     z-index: 7;
     width:calc(var(--hoverDownWidth)*3);
@@ -82,4 +88,5 @@
     background-color: rgb(255, 255, 255);
    color: black;
 }
+
 

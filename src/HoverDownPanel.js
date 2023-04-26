@@ -43,6 +43,8 @@ export default function HoverDownPanel() {
                 setModalActive(1);
                 return;
             }
+            default:
+                return;
         }
     }
     return(
